@@ -189,7 +189,7 @@ const car = {
     },
 
     hasRightOfWay: function () {
-        return ['Mercedes', 'BMW', 'Porsche'].includes(this.brand)
+        return ['Mercedes', 'BMW', 'Porsche'].includes(this.brand);
     }
 };
 

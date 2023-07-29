@@ -2,17 +2,17 @@
  * PRINTING TO CONSOLE
  */
 console.log('Hii'); // Hii
-console.log('ABC', 'DEF', 'GHI') // ABC DEF GHI
+console.log('ABC', 'DEF', 'GHI'); // ABC DEF GHI
 
 /**
  * SENDING AN ALERT
  */
-//alert('This is an alert')
+//alert('This is an alert');
 
 /**
  * PROMPT (GET USER INPUT)
  */
-// const userInput = prompt('What\'s your favourite number?')
+// const userInput = prompt('What\'s your favourite number?');
 
 /**
  * USE SEMICOLONS OR NOT?
@@ -117,25 +117,25 @@ myVar = 2;
 /*
 Math and assignment operators
  */
-let x = 5 // assignment
+let x = 5; // assignment
 // Addition
 console.log(5 + 5 + 10); // 20
-x += 5 // x = x + 5
+x += 5; // x = x + 5
 // Subtraction
 console.log(50 - 10 - 30); // 10R
-x -= 2 // x = x - 2
+x -= 2; // x = x - 2
 // Multiplication
 console.log(5 * 5); // 25
-x *= 10 // x = x * 10
+x *= 10; // x = x * 10
 // Division
 console.log(10 / 2); // 5
-x /= 2 // x = x / 2
+x /= 2; // x = x / 2
 // Exponentiation
 console.log(2 ** 4); // 16 (2^4 -> 2 * 2 * 2 * 2)
-x **= 3 // x = x ** 3
+x **= 3; // x = x ** 3
 // Modulo
 console.log(5 % 2); // 1
-x %= 2 // x = x % 2
+x %= 2; // x = x % 2
 
 // Addition operator can also be used to concat strings
 const myFirstName = 'David';
@@ -157,7 +157,7 @@ x = 0;
 console.log(x++); // 0
 console.log(x); // 1
 // post decrement
-x = 1
+x = 1;
 console.log(x--); // 1
 console.log(x); // 0
 
@@ -294,23 +294,23 @@ const day = 'monday';
 switch (day) {
     case 'monday':
         console.log("It's monday!");
-        break
+        break;
     case 'tuesday':
         console.log("It's tuesday!");
-        break
+        break;
     case 'wednesday':
         console.log("It's wednesday!");
-        break
+        break;
     case 'thursday':
         console.log("It's thursday!");
-        break
+        break;
     case 'friday':
         console.log("It's friday!");
-        break
+        break;
     case 'saturday':
     case 'sunday':
         console.log("It's weekend!");
-        break
+        break;
     default:
         console.log('Unknown day');
 }
@@ -318,6 +318,6 @@ switch (day) {
 /**
  * CONDITIONAL (TERNARY) OPERATOR
  */
-const johnsAge = 17
-const message = johnsAge > 18 ? 'John is an adult.' : 'John is a child.'
-console.log(message) // John is a child
+const johnsAge = 17;
+const message = johnsAge > 18 ? 'John is an adult.' : 'John is a child.';
+console.log(message); // John is a child
