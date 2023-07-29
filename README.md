@@ -41,4 +41,11 @@
             <li>while and do while Loop</li>
         </ol>
     </li>
+    <li>
+        <h3>DOM and Event Fundamentals</h3>
+        <ol>
+            <li>PROJECT: Guess My Number</li>
+            <li>PROJECT: Modal Window</li>
+        </ol>
+    </li>
 </ul>

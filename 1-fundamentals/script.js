@@ -144,19 +144,19 @@ const fullName = myFirstName + ' ' + myLastName;
 
 console.log(fullName); // David Niessen
 
-// pre increment
+// Pre increment
 x = 0;
 console.log(++x); // 1
 console.log(x); // 1
-// pre decrement
+// Pre decrement
 x = 1;
 console.log(--x); // 0
 console.log(x); // 0
-// post increment
+// Post increment
 x = 0;
 console.log(x++); // 0
 console.log(x); // 1
-// post decrement
+// Post decrement
 x = 1;
 console.log(x--); // 1
 console.log(x); // 0
@@ -193,7 +193,7 @@ console.log(personInfo);
 const currentYear = 2023;
 console.log(`John is ${currentYear - personBirthYear} years old.`);
 
-// multiline string
+// Multiline string
 console.log(`line 1
 line 2
 line 3`);

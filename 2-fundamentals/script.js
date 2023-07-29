@@ -123,29 +123,29 @@ const arrFunc5 = () => {
  * INTRODUCTION TO ARRAYS
  */
 
-// create array
+// Create array
 const myArray = ['A', 'B', 'C'];
-// access elements
+// Access elements
 console.log(myArray[0]); // A
 console.log(myArray[1]); // B
 console.log(myArray[2]); // C
 console.log(myArray[3]); // undefined
-// array length
+// Array length
 console.log(myArray.length); // 3
-// replace elements
+// Replace elements
 myArray[1] = 'Hi'; // A, Hi, C
-// add element to the end
+// Add element to the end
 myArray.push('D');
-// add element to the beginning
+// Add element to the beginning
 myArray.unshift('Z');
-// remove (and get) first element
+// Remove (and get) first element
 myArray.shift();
-// remove (and get) last element
+// Remove (and get) last element
 console.log(myArray.pop()); // D
 console.log(myArray); // A, Hi, C
-// find element position
+// Find element position
 console.log(myArray.indexOf('C')); // 2
-// check if element is in the array
+// Check if element is in the array
 console.log(myArray.includes('C')); // true
 
 
@@ -153,7 +153,7 @@ console.log(myArray.includes('C')); // true
  * INTRODUCTION TO OBJECTS
  */
 
-// create object
+// Create object
 const person = {
     firstName: 'John',
     lastName: 'Doe',
@@ -163,15 +163,15 @@ const person = {
 };
 
 
-// dot notation
+// Dot notation
 console.log(person.firstName); // John
-// bracket notation
+// Bracket notation
 console.log(person['firstName']);
 
-// add property (dot notation)
+// Add property (dot notation)
 person.location = 'Berlin';
 console.log(person.location); // Berlin
-// add property (bracket notation)
+// Add property (bracket notation)
 person['hobbies'] = ['gaming', 'programming'];
 console.log(person.hobbies); // gaming, programming
 
@@ -206,20 +206,20 @@ for (let i = 0; i < 10; i++) {
     console.log(i); // 0, 1, 2, 3... 9
 }
 
-// looping through array with regular for loop
+// Looping through array with regular for loop
 const names = ['John', 'Mark', 'Peter', 'Tom', 'Max'];
 
 for (let i = 0; i < names.length; i++) {
     console.log(names[i]); // John, Mark, Peter, Tom, Max
 }
 
-// cancelling a loop (break)
+// Cancelling a loop (break)
 for (let i = 0; i < 10; i++) {
     console.log(i); // 1, 2, 3, 4, 5
     if (i === 5) break;
 }
 
-// skipping to next iteration (continue)
+// Skipping to next iteration (continue)
 for (let i = 0; i < 10; i++) {
     if (i % 2 === 0) continue;
     console.log(i); // 1, 3, 5, 7, 9
@@ -243,7 +243,7 @@ while (counter < 5) {
     console.log(counter++); // 0 1 2 3 4
 }
 
-// the do while loop will execute the body before checking the condition
+// The do while loop will execute the body before checking the condition
 counter = 0;
 
 do {
