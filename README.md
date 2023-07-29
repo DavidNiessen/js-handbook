@@ -1,4 +1,4 @@
-<h1>JavaScript Course</h1>
+<h1>JavaScript Handbook</h1>
 <h2>Content</h2>
 <ul>
     <li>
