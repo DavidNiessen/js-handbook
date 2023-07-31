@@ -46,6 +46,12 @@
         <ol>
             <li>PROJECT: Guess My Number</li>
             <li>PROJECT: Modal Window</li>
+            <li>PROJECT: Pig Game</li>
         </ol>
     </li>
 </ul>
+<br>
+<br>
+<p>Credits: Jonas Schmedtmann's JavaScript course</p>
+<a>https://www.udemy.com/course/the-complete-javascript-course/</a>
+<p>Check it out, it's really worth it!</p>
