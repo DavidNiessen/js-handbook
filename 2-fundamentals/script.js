@@ -101,13 +101,15 @@ const arrFunc5 = () => {
 
 /**
  * DIFFERENCES BETWEEN FUNCTION EXPRESSIONS AND ARROW FUNCTIONS
+ *
+ * Learn more about 'this' (with examples):
+ * {@link https://github.com/zSkillCode/js-handbook/4-behind-the-scenes/script.js}
  */
 
 /*
 1. 'this' Keyword
-  ->  In arrow functions, this is lexically bound. It means that this has the
-      same value as in the outer scope where the arrow function is
-      defined, not where it is used.
+  ->  In arrow functions, this is lexically bound (inherited from the surrounding scope).
+      Examples can be found here: https://github.com/zSkillCode/js-handbook/4-behind-the-scenes/script.js
 
 2. Arguments Binding
   -> Arrow functions do not have their own arguments object.

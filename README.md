@@ -49,6 +49,16 @@
             <li>PROJECT: Pig Game</li>
         </ol>
     </li>
+    <li>
+        <h3>Behind the Scenes</h3>
+        <ol>
+            <li>Scope</li>
+            <li>Hoisting</li>
+            <li>this Keyword</li>
+            <li>arguments Keyword</li>
+            <li>Primitives VS Objects</li>
+        </ol>
+    </li>
 </ul>
 <br>
 <br>
