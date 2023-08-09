@@ -77,6 +77,18 @@
             <li>Working With Strings</li>
         </ol>
     </li>
+    <li>
+        <h3>A Closer Look at Functions</h3>
+        <ol>
+            <li>Default Parameters</li>
+            <li>Higher Order Functions - Functions Accepting Callback Functions</li>
+            <li>Higher Order Functions - Functions Returning Functions</li>
+            <li>The call and apply Methods</li>
+            <li>The bind Method</li>
+            <li>Immediately Invoked Function Expressions (IIFE)</li>
+            <li>Closures</li>
+        </ol>
+    </li>
 </ul>
 <br>
 <br>
