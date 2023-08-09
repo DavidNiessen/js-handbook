@@ -233,13 +233,47 @@ for (let i = 0; i < 10; i++) {
 
 const myNewArray = [1, 'Hi', true, 765];
 
+// Loop through array
 for (const element of myNewArray) {
     console.log(element); // 1, Hi, true, 765
 }
 
+// With index
+for (const entry of ['A', 'B', 'C'].entries()) {
+    console.log(entry); // [ 0, 'A' ] [ 1, 'B' ] [ 2, 'C' ]
+}
+
+/**
+ * LOOPING THROUGH OBJECTS
+ */
+
+const myCar = {
+    brand: 'Chevrolet',
+    model: 'Camaro',
+    data: {
+        topSpeed: '180mph',
+        hp: '455hp'
+    }
+};
+
+// Properties
+const properties = Object.keys(myCar);
+for (const property of properties) console.log(property); // brand model data
+
+// Values
+const values = Object.values(myCar);
+for (const value of values) console.log(value); // Chevrolet Camaro { topSpeed: '180mph', hp: '455hp' }
+
+// Entire object
+const entries = Object.entries(myCar);
+for (const entry of entries)
+    console.log(entry); // [ 'brand', 'Chevrolet' ] [ 'model', 'Camaro' ] [ 'data', { topSpeed: '180mph', hp: '455hp' } ]
+
+
 /**
  * WHILE AND DO WHILE LOOP
  */
+
 let counter = 0;
 while (counter < 5) {
     console.log(counter++); // 0 1 2 3 4

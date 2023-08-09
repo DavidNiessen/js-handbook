@@ -38,6 +38,7 @@
             <li>Introduction to Objects</li>
             <li>Object Methods</li>
             <li>for of Loop</li>
+            <li>Looping Through Objects</li>
             <li>while and do while Loop</li>
         </ol>
     </li>
@@ -57,6 +58,23 @@
             <li>this Keyword</li>
             <li>arguments Keyword</li>
             <li>Primitives VS Objects</li>
+        </ol>
+    </li>
+    <li>
+        <h3>Data Structures, Modern Operators and Strings</h3>
+        <ol>
+            <li>Destructuring Arrays</li>
+            <li>Destructuring Objects</li>
+            <li>Spread Operator (...)</li>
+            <li>Rest Pattern and Parameters</li>
+            <li>Short Circuiting (||, &&)</li>
+            <li>Nullish Coalescing Operator (??)</li>
+            <li>Logical Assignment Operators (||=, &&=, ??=)</li>
+            <li>Enhanced Object Literals</li>
+            <li>Optional Chaining (??.)</li>
+            <li>Sets</li>
+            <li>Map Fundamentals</li>
+            <li>Working With Strings</li>
         </ol>
     </li>
 </ul>
