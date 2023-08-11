@@ -120,4 +120,5 @@
 <br>
 <br>
 <p>Credits: Jonas Schmedtmann's JavaScript course</p>
-[Check it out](https://www.udemy.com/course/the-complete-javascript-course/), it's really worth it!
+
+[Check it out!](https://www.udemy.com/course/the-complete-javascript-course/) It's really worth it!
