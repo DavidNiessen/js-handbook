@@ -127,28 +127,64 @@ const arrFunc5 = () => {
 
 // Create array
 const myArray = ['A', 'B', 'C'];
+
 // Access elements
 console.log(myArray[0]); // A
 console.log(myArray[1]); // B
 console.log(myArray[2]); // C
 console.log(myArray[3]); // undefined
+
 // Array length
 console.log(myArray.length); // 3
+
 // Replace elements
 myArray[1] = 'Hi'; // A, Hi, C
+
 // Add element to the end
 myArray.push('D');
+
 // Add element to the beginning
 myArray.unshift('Z');
+
 // Remove (and get) first element
 myArray.shift();
+
 // Remove (and get) last element
 console.log(myArray.pop()); // D
 console.log(myArray); // A, Hi, C
+
 // Find element position
 console.log(myArray.indexOf('C')); // 2
+
 // Check if element is in the array
 console.log(myArray.includes('C')); // true
+
+// Slice (extracts a part of the array)
+console.log([1, 2, 3, 4, 5].slice(2)); // [ 3, 4, 5 ]
+console.log([1, 2, 3, 4, 5].slice(2, 4)); // [ 3, 4 ]
+console.log([1, 2, 3, 4, 5].slice(-2)); // [ 4, 5 ]
+
+// Splice (removes a part of the array and also mutates the original array)
+const myNewArr = [1, 2, 3, 4, 5];
+myNewArr.splice(-2);
+console.log(myNewArr); // [ 1, 2, 3 ]
+
+// Reverse
+console.log([1, 2, 3, 4, 5].reverse()); // [ 5, 4, 3, 2, 1 ]
+
+// Concat
+console.log(['a', 'b', 'c'].concat(['d', 'e', 'f'])); // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+
+// Join
+console.log(['a', 'b', 'c'].join('-')); // a-b-c
+
+// at Method (new way to access elements)
+// The difference to [] is that at() allows to access elements from the end (negative index)
+console.log(['a', 'b', 'c'].at(-1)); // c
+console.log(['a', 'b', 'c'].at(-2)); // b
+
+// forEach Method
+['A', 'B', 'C'].forEach(element => console.log(element)); // A B C
 
 
 /**

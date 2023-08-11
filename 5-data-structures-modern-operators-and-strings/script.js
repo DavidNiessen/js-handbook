@@ -318,6 +318,9 @@ console.log(mySet); // Set(6) { 1, 2, 3, 4, 5, 6 }
 mySet.delete(1);
 console.log(mySet); // Set(5) { 2, 3, 4, 5, 6 }
 
+// forEach
+mySet.forEach(value => console.log(value)); // 2 3 4 5 6
+
 // Clear Set
 mySet.clear();
 console.log(mySet); // Set(0) {}
@@ -365,6 +368,10 @@ console.log(userMap.values()); // [Map Iterator] { 'john@gmail.com', 'max@gmail.
 // Get all entries
 console.log(userMap.entries()); // [Map Entries] { [ 'john', 'john@gmail.com' ], [ 'max', 'max@gmail.com' ], [ 'mark', 'mark@gmail.com' ] }
 
+// forEach
+userMap.forEach((value, key) =>
+    console.log(`${key}:${value}`)); // john:john@gmail.com max:max@gmail.com mark:mark@gmail.com
+
 // Clear map
 userMap.clear();
 console.log(userMap); // Map(0) {}
@@ -376,6 +383,9 @@ console.log(userMap); // Map(0) {}
 
 // Access single characters
 console.log('ABC'[0]); // A
+
+// Access single character (also works from the end with negative index)
+console.log('ABC'.at(-1)); // C
 
 // Get string length
 console.log('123456'.length); // 6

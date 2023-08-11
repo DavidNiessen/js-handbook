@@ -2,7 +2,7 @@
 <h2>Content</h2>
 <ul>
     <li>
-        <h3>Fundamentals - 1</h3>
+        <h3>1: Fundamentals - 1</h3>
         <ol>
             <li>Printing to console</li>
             <li>Sending an alert</li>
@@ -26,7 +26,7 @@
         </ol>
     </li>
     <li>
-        <h3>Fundamentals - 2</h3>
+        <h3>2: Fundamentals - 2</h3>
         <ol>
             <li>Strict Mode</li>
             <li>Function Declarations</li>
@@ -43,7 +43,7 @@
         </ol>
     </li>
     <li>
-        <h3>DOM and Event Fundamentals</h3>
+        <h3>3: DOM and Event Fundamentals</h3>
         <ol>
             <li>PROJECT: Guess My Number</li>
             <li>PROJECT: Modal Window</li>
@@ -51,7 +51,7 @@
         </ol>
     </li>
     <li>
-        <h3>Behind the Scenes</h3>
+        <h3>4: Behind the Scenes</h3>
         <ol>
             <li>Scope</li>
             <li>Hoisting</li>
@@ -61,7 +61,7 @@
         </ol>
     </li>
     <li>
-        <h3>Data Structures, Modern Operators and Strings</h3>
+        <h3>5: Data Structures, Modern Operators and Strings</h3>
         <ol>
             <li>Destructuring Arrays</li>
             <li>Destructuring Objects</li>
@@ -78,7 +78,7 @@
         </ol>
     </li>
     <li>
-        <h3>A Closer Look at Functions</h3>
+        <h3>6: A Closer Look at Functions</h3>
         <ol>
             <li>Default Parameters</li>
             <li>Higher Order Functions - Functions Accepting Callback Functions</li>
@@ -86,12 +86,38 @@
             <li>The call and apply Methods</li>
             <li>The bind Method</li>
             <li>Immediately Invoked Function Expressions (IIFE)</li>
-            <li>Closures</li>
         </ol>
+    </li>
+     <li>
+        <h3>7: Advanced Array Methods</h3>
+        <ol>
+            <li>Data Transformations: map, filter and reduce</li>
+            <li>find and findIndex Methods</li>
+            <li>some and every Methods</li>
+            <li>flat and flatMap Methods</li>
+            <li>Sorting</li>
+            <li>More Ways of Creating and Filling Arrays</li>
+        </ol>
+    </li>
+     <li>
+        <h3>8: Numbers, Dates, Intl and Timers</h3>
+        <ol>
+            <li>Converting and Checking Numbers</li>
+            <li>Math and Rounding</li>
+            <li>Numeric Separators</li>
+            <li>Working with BigInt</li>
+            <li>Working with Dates</li>
+            <li>Operations with Dates</li>
+            <li>Internationalizing Dates (Intl)</li>
+            <li>Internationalizing Numbers (Intl)</li>
+            <li>Timers: setTimeout and setInterval</li>
+        </ol>
+    </li>
+    <li>
+        <h3>9: Project: Bankist App</h3>
     </li>
 </ul>
 <br>
 <br>
 <p>Credits: Jonas Schmedtmann's JavaScript course</p>
-<a>https://www.udemy.com/course/the-complete-javascript-course/</a>
-<p>Check it out, it's really worth it!</p>
+[Check it out](https://www.udemy.com/course/the-complete-javascript-course/), it's really worth it!
