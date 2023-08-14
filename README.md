@@ -45,6 +45,23 @@
     <li>
         <h3>3: DOM and Event Fundamentals</h3>
         <ol>
+            <li>
+                <p>Basics</p>
+                <ol>
+                    <li>Selecting Elements</li>
+                    <li>Creating and Inserting Elements</li>
+                    <li>Deleting Elements</li>
+                    <li>Classes</li>
+                    <li>CSS Styles</li>
+                    <li>Attributes</li>
+                    <li>Listening for Events</li>
+                    <li>Removing Event Listeners</li>
+                    <li>Event Propagation</li>
+                    <li>DOM Traversing</li>
+                    <li>Lifecycle DOM Events</li>
+                    <li>Efficient Script Loading: defer and async</li>
+                </ol>
+            </li>
             <li>PROJECT: Guess My Number</li>
             <li>PROJECT: Modal Window</li>
             <li>PROJECT: Pig Game</li>

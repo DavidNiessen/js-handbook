@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Basics</title>
+    <style>
+        :root {
+            --color-primary: #fff;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            place-content: space-evenly;
+            transition: background-color .5s;
+        }
+
+        .header__icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        main {
+            margin-left: 20px;
+        }
+
+        .cookie-message {
+            text-align: center;
+            background: rgba(90, 106, 238, 0.65);
+            padding: 10px;
+            margin: 0;
+        }
+
+        .cookie-message::after {
+            content: 'CLOSE';
+            background-color: #fff;
+            color: var(--color-primary);
+            margin-left: 25px;
+            padding: 5px 8px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <img class="header__icon" data-version-number="3.0" src="" alt="">
+        <h2 class="header__title">HEADER</h2>
+        <h2 class="header__title">HEADER</h2>
+    </header>
+
+    <main class="main">
+        <p>Form</p>
+        <form action="#">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>Shopping List</p>
+        <ul class="shopping-list">
+            <li class="shopping-list__item">5 Apples</li>
+            <li class="shopping-list__item">3 Oranges</li>
+            <li class="shopping-list__item">Milk</li>
+            <li class="shopping-list__item">Sugar</li>
+        </ul>
+
+        <section class="propagation__section--1">
+            <div class="propagation__container--1">
+                <button class="propagation__button--1">CLICK ME</button>
+            </div>
+        </section>
+
+        <section class="propagation__section--2">
+            <div class="propagation__container--2">
+                <button class="propagation__button--2">CLICK ME</button>
+            </div>
+        </section>
+
+        <section class="propagation__section--3">
+            <div class="propagation__container--3">
+                <button class="propagation__button--3">CLICK ME</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
