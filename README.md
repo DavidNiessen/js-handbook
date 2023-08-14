@@ -133,6 +133,27 @@
     <li>
         <h3>9: Project: Bankist App</h3>
     </li>
+    <li>
+        <h3>10: Project: Bankist Website</h3>
+    </li>
+    <li>
+        <h3>11: Object Oriented Programming (OOP)</h3>
+        <ol>
+            <li>Constructor Functions</li>
+            <li>instanceof Operator</li>
+            <li>Prototypes</li>
+            <li>Prototype Chain</li>
+            <li>ES6 Classes</li>
+            <li>Getters and Setters</li>
+            <li>Static Properties and Methods</li>
+            <li>Object.create()</li>
+            <li>Inheritance Between Classes: Constructor Functions</li>
+            <li>Inheritance Between Classes: ES6 Classes</li>
+            <li>Inheritance Between Classes: Object.create()</li>
+            <li>Encapsulation: Protected Properties and Methods</li>
+            <li>Encapsulation: Private Class Fields and Methods</li>
+        </ol>
+    </li>
 </ul>
 <br>
 <br>
