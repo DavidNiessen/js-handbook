@@ -154,6 +154,9 @@
             <li>Encapsulation: Private Class Fields and Methods</li>
         </ol>
     </li>
+    <li>
+        <h3>12: Project: Mapty</h3>
+    </li>
 </ul>
 <br>
 <br>
