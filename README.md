@@ -91,7 +91,7 @@
             <li>Optional Chaining (??.)</li>
             <li>Sets</li>
             <li>Map Fundamentals</li>
-            <li>Working With Strings</li>
+            <li>Working with Strings</li>
         </ol>
     </li>
     <li>
@@ -156,6 +156,19 @@
     </li>
     <li>
         <h3>12: Project: Mapty</h3>
+    </li>
+    <li>
+        <h3>13: Asynchronous JavaScript</h3>
+        <ol>
+            <li>AJAX Calls: XMLHttpRequest</li>
+            <li>Promises and the Fetch API</li>
+            <li>Throwing errors manually</li>
+            <li>Building a Promise</li>
+            <li>Handling Errors with try/catch/finally</li>
+            <li>Consuming Promises with async/await</li>
+            <li>Running Promises in Parallel</li>
+            <li>Other Promise Combinators: race, allSettled and any</li>
+        </ol>
     </li>
 </ul>
 <br>
