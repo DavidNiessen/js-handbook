@@ -170,6 +170,14 @@
             <li>Other Promise Combinators: race, allSettled and any</li>
         </ol>
     </li>
+    <li>
+        <h3>14: Modern JavaScript Development: Modules, Tooling and Functional Programming</h3>
+        <ol>
+            <li>Exporting and Importing in ES6 Modules</li>
+            <li>Top Level await</li>
+            <li>Module Pattern (legacy)</li>
+        </ol>
+    </li>
 </ul>
 <br>
 <br>

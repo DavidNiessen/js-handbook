@@ -3,3 +3,6 @@
 *.iml
 out
 gen
+
+# Node modules
+/14-modern-javascript-development/node_modules/
