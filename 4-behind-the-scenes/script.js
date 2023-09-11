@@ -12,38 +12,38 @@
 let carName = 'Toyota';
 
 function myFunction() {
-    // carsName is a global variable and can be accessed from any function
-    console.log(carName);
+  // carsName is a global variable and can be accessed from any function
+  console.log(carName);
 }
 
 myFunction(); // Toyota
 
 // FUNCTION SCOPE
 function anotherFunction() {
-    let greetings = 'Hello, world!';
+  let greetings = 'Hello, world!';
 
-    // greetings is a local variable and can not be accessed from outside the function
-    console.log(greetings);
+  // greetings is a local variable and can not be accessed from outside the function
+  console.log(greetings);
 }
 
 anotherFunction(); // Hello, world!
 
 try {
-    console.log(greetings); // Uncaught ReferenceError: greetings is not defined
+  console.log(greetings); // Uncaught ReferenceError: greetings is not defined
 } catch (err) {
-    console.log(err.message); // greetings is not defined
+  console.log(err.message); // greetings is not defined
 }
 
 // BLOCK SCOPE
 {
-    let blockVariable = 'Block Scope';
-    console.log(blockVariable);
+  let blockVariable = 'Block Scope';
+  console.log(blockVariable);
 }
 
 try {
-    console.log(blockVariable); // Uncaught ReferenceError: blockVariable is not defined
+  console.log(blockVariable); // Uncaught ReferenceError: blockVariable is not defined
 } catch (err) {
-    console.log(err.message); // blockVariable is not defined
+  console.log(err.message); // blockVariable is not defined
 }
 
 
@@ -60,10 +60,10 @@ console.log(y); // undefined
 var y = 5;
 
 try {
-    console.log(z); // Throws error
-    let z = 5;
+  console.log(z); // Throws error
+  let z = 5;
 } catch (err) {
-    console.log(err.message); // z is not defined
+  console.log(err.message); // z is not defined
 }
 
 /**
@@ -82,10 +82,10 @@ this = object that is calling the method
  */
 
 const person = {
-    name: 'John Doe',
-    someFunction: function () {
-        return this;
-    }
+  name: 'John Doe',
+  someFunction: function () {
+    return this;
+  }
 };
 console.log(person.someFunction()); // { name: 'John Doe', someFunction: [Function: someFunction] }
 
@@ -97,7 +97,7 @@ Non-Strict mode: this = window (in the browser)
  */
 
 const someOtherFunction = function () {
-    return this;
+  return this;
 };
 console.log(someOtherFunction()); // undefined
 
@@ -109,18 +109,18 @@ this is lexically bound (inherited from the surrounding scope)
 
 // Arrow function within surrounding function
 const anotherObject = {
-    someProperty: 999,
-    outerMethod: function () {
-        const innerArrowFunction = () => this;
-        console.log(innerArrowFunction()); // { someProperty: 999, outerMethod: [Function: outerMethod] }
-    }
+  someProperty: 999,
+  outerMethod: function () {
+    const innerArrowFunction = () => this;
+    console.log(innerArrowFunction()); // { someProperty: 999, outerMethod: [Function: outerMethod] }
+  }
 };
 anotherObject.outerMethod();
 
 // Arrow function without surrounding function
 const thirdObject = {
-    someProperty: 'Hi',
-    arrowMethod: () => this
+  someProperty: 'Hi',
+  arrowMethod: () => this
 };
 console.log(thirdObject.arrowMethod()); // Window object (in browser)
 
@@ -137,13 +137,13 @@ console.log(thirdObject.arrowMethod()); // Window object (in browser)
  */
 
 function funcDeclaration() {
-    console.log(arguments);
+  console.log(arguments);
 }
 
 funcDeclaration('A', 46, true, 'B'); // [Arguments] { '0': 'A', '1': 46, '2': true, '3': 'B' }
 
 const funcExpression = function () {
-    console.log(arguments);
+  console.log(arguments);
 };
 funcExpression('X', 'Y'); // [Arguments] { '0': 'X', '1': 'Y' }
 
@@ -164,7 +164,7 @@ console.log(oldAge); // 30
 
 // OBJECTS (pass by reference)
 const john = {
-    name: 'John',
+  name: 'John',
 };
 
 const max = john; // max points to john

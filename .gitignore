@@ -6,3 +6,7 @@ gen
 
 # Node modules
 /14-modern-javascript-development/node_modules/
+/15-project-forkify/node_modules/
+
+# Parcel cache
+/15-project-forkify/.parcel-cache/

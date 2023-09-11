@@ -5,18 +5,18 @@
  */
 
 const Person = function (firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
+  this.firstName = firstName;
+  this.birthYear = birthYear;
 
-    // DON'T DO THIS
-    // If you would do this, every instance would have its own copy of the
-    // method, which could lead to a performance issue
-    // USE PROTOTYPES INSTEAD
-    /*
-    this.calcAge = function () {
-        return 2023 - this.birthYear;
-    };
-     */
+  // DON'T DO THIS
+  // If you would do this, every instance would have its own copy of the
+  // method, which could lead to a performance issue
+  // USE PROTOTYPES INSTEAD
+  /*
+  this.calcAge = function () {
+      return 2023 - this.birthYear;
+  };
+   */
 };
 
 const person = new Person('David', 2004);
@@ -39,7 +39,7 @@ console.log(person); // Person { firstName: 'David', birthYear: 2004 }
 
 const anotherPerson = new Person('John', 1999);
 console.log(anotherPerson instanceof Person); // true
-console.log({firstName: 'John', birthYear: 1999} instanceof Person); // false
+console.log({ firstName: 'John', birthYear: 1999 } instanceof Person); // false
 
 /**
  * PROTOTYPES
@@ -50,7 +50,7 @@ console.log({firstName: 'John', birthYear: 1999} instanceof Person); // false
  */
 
 Person.prototype.calcAge = function () {
-    return 2023 - this.birthYear;
+  return 2023 - this.birthYear;
 };
 
 console.log(person.calcAge()); // 19
@@ -98,16 +98,16 @@ class ClassDecl {
 
 // Create class with constructor
 class User {
-    constructor(id, name, rank) {
-        this.id = id;
-        this.name = name;
-        this.rank = rank;
-    }
+  constructor(id, name, rank) {
+    this.id = id;
+    this.name = name;
+    this.rank = rank;
+  }
 
-    // Methods will be added to the prototype property of the class
-    isAdmin() {
-        return this.rank.toLowerCase() === 'admin';
-    }
+  // Methods will be added to the prototype property of the class
+  isAdmin() {
+    return this.rank.toLowerCase() === 'admin';
+  }
 }
 
 const user = new User(29421, 'user_1', 'user');
@@ -119,15 +119,15 @@ console.log(user.isAdmin());
 
 // Getters and setters are methods that "simulate properties"
 const bankAccount = {
-    movements: [50, 100, 320],
+  movements: [50, 100, 320],
 
-    get latest() {
-        return this.movements.slice(-1).pop();
-    },
+  get latest() {
+    return this.movements.slice(-1).pop();
+  },
 
-    set latest(movement) {
-        this.movements.push(movement);
-    }
+  set latest(movement) {
+    this.movements.push(movement);
+  }
 };
 
 console.log(bankAccount.latest); // 320
@@ -135,18 +135,18 @@ bankAccount.latest = 110;
 console.log(bankAccount.latest); // 110
 
 class PersonClass {
-    constructor(name, age) {
-        this.name = name;
-        this._age = age;
-    }
+  constructor(name, age) {
+    this.name = name;
+    this._age = age;
+  }
 
-    get age() {
-        return this._age;
-    }
+  get age() {
+    return this._age;
+  }
 
-    set age(age) {
-        this._age = age;
-    }
+  set age(age) {
+    this._age = age;
+  }
 }
 
 const personInstance = new PersonClass('John', 27);
@@ -160,19 +160,19 @@ console.log(personInstance.age); // 30
  */
 
 class Num {
-    static PI = 3.14159;
+  static PI = 3.14159;
 
-    static parseNum(str) {
-        return new Num(+str);
-    }
+  constructor(value) {
+    this._value = value;
+  }
 
-    constructor(value) {
-        this._value = value;
-    }
+  get value() {
+    return this._value;
+  }
 
-    get value() {
-        return this._value;
-    }
+  static parseNum(str) {
+    return new Num(+str);
+  }
 }
 
 console.log(Num.PI); // 3.14159
@@ -189,14 +189,14 @@ console.log(myNum.value); // 34
 
 // Create the prototype
 const PersonPrototype = {
-    calcAge() {
-        return 2023 - this.birthYear;
-    },
+  calcAge() {
+    return 2023 - this.birthYear;
+  },
 
-    init(firstName, birthYear) {
-        this.firstName = firstName;
-        this.birthYear = birthYear;
-    }
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
 };
 
 // Create an object which is linked to the prototype
@@ -210,18 +210,18 @@ console.log(david.calcAge()); // 19
  */
 
 const ParentCF = function (firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
+  this.firstName = firstName;
+  this.birthYear = birthYear;
 };
 
 ParentCF.prototype.calcAge = function () {
-    return 2023 - this.birthYear;
+  return 2023 - this.birthYear;
 };
 
 
 const ChildCF = function (firstName, birthYear, car) {
-    Person.call(this, firstName, birthYear);
-    this.car = car;
+  Person.call(this, firstName, birthYear);
+  this.car = car;
 };
 
 // Linking prototypes
@@ -229,7 +229,7 @@ ChildCF.prototype = Object.create(Person.prototype);
 ChildCF.prototype.constructor = ChildCF;
 
 ChildCF.prototype.drive = function () {
-    console.log('Driving 🚗');
+  console.log('Driving 🚗');
 };
 
 const child = new ChildCF('Mike', 2002, 'Mercedes');
@@ -241,24 +241,24 @@ console.log(child.calcAge()); // 21
  */
 
 class Vehicle {
-    constructor(topSpeed) {
-        this._topSpeed = topSpeed;
-    }
+  constructor(topSpeed) {
+    this._topSpeed = topSpeed;
+  }
 
-    logTopSpeed() {
-        console.log(this._topSpeed);
-    }
+  logTopSpeed() {
+    console.log(this._topSpeed);
+  }
 }
 
 class Car extends Vehicle {
-    constructor(topSpeed, color) {
-        super(topSpeed);
-        this._color = color;
-    }
+  constructor(topSpeed, color) {
+    super(topSpeed);
+    this._color = color;
+  }
 
-    logColor() {
-        console.log(this._color);
-    }
+  logColor() {
+    console.log(this._color);
+  }
 }
 
 const redCar = new Car('240km/h', 'red');
@@ -271,24 +271,24 @@ redCar.logColor(); // red
  */
 
 const PersonProto = {
-    calcAge() {
-        return 2023 - this.birthYear;
-    },
+  calcAge() {
+    return 2023 - this.birthYear;
+  },
 
-    init(firstName, birthYear) {
-        this.firstName = firstName;
-        this.birthYear = birthYear;
-    }
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
 };
 
 const StudentProto = Object.create(PersonProto);
 StudentProto.init = function (firstName, birthYear, course) {
-    PersonProto.init.call(this, firstName, birthYear);
-    this.course = course;
+  PersonProto.init.call(this, firstName, birthYear);
+  this.course = course;
 };
 
 StudentProto.introduce = function () {
-    console.log(`Hi I'm ${this.firstName} and I'm ${this.calcAge()} years old. I'm a ${this.course} student.`);
+  console.log(`Hi I'm ${this.firstName} and I'm ${this.calcAge()} years old. I'm a ${this.course} student.`);
 };
 
 const jay = Object.create(StudentProto);
@@ -304,18 +304,18 @@ jay.introduce(); // Hi I'm Jay and I'm 23 years old. I'm a Computer Science stud
  */
 
 class AnotherPerson {
-    constructor(birthYear) {
-        this._birthYear = birthYear;
-        this._currentYear = 2023;
-    }
+  constructor(birthYear) {
+    this._birthYear = birthYear;
+    this._currentYear = 2023;
+  }
 
-    _calcAge() {
-        return this._currentYear - this._birthYear;
-    }
+  _calcAge() {
+    return this._currentYear - this._birthYear;
+  }
 
-    logAge() {
-        console.log(this._calcAge());
-    }
+  logAge() {
+    console.log(this._calcAge());
+  }
 }
 
 const anotherPerson1 = new AnotherPerson(2000);
@@ -330,25 +330,25 @@ console.log(anotherPerson1._birthYear); // 2000 -> Can be accessed but shouldn't
  */
 
 class YetAnotherPerson {
-    // Public fields
-    imPublic = 'I\'m public!';
-    // Private fields
-    #currentYear = 2023;
-    #birthYear;
+  // Public fields
+  imPublic = 'I\'m public!';
+  // Private fields
+  #currentYear = 2023;
+  #birthYear;
 
-    constructor(birthYear) {
-        this.#birthYear = birthYear;
-    }
+  constructor(birthYear) {
+    this.#birthYear = birthYear;
+  }
 
-    // Public methods
-    logAge() {
-        console.log(this.#calcAge());
-    }
+  // Public methods
+  logAge() {
+    console.log(this.#calcAge());
+  }
 
-    // Private methods
-    #calcAge() {
-        return this.#currentYear - this.#birthYear;
-    }
+  // Private methods
+  #calcAge() {
+    return this.#currentYear - this.#birthYear;
+  }
 }
 
 const yetAnotherPerson = new YetAnotherPerson(1989);

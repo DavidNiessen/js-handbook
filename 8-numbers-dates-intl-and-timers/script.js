@@ -181,16 +181,16 @@ console.log(new Intl.DateTimeFormat('tr-TR').format(new Date())); // 11.08.2023
 
 // Apply options
 const options = {
-    hour: 'numeric',
-    minute: 'numeric',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-    weekday: 'long'
+  hour: 'numeric',
+  minute: 'numeric',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  weekday: 'long'
 };
 
 console.log(new Intl.DateTimeFormat('de-DE', options)
-    .format(new Date())); // Freitag, 11. August 2023 um 21:27
+  .format(new Date())); // Freitag, 11. August 2023 um 21:27
 
 // Get locale from user's browser
 // const locale = navigator.language;
@@ -210,8 +210,8 @@ console.log(new Intl.NumberFormat('ar-SY').format(num)); // ٣٬٨٨٤٬٧٦٤٫
 
 // Apply options
 const options2 = {
-    style: 'unit',
-    unit: 'mile-per-hour'
+  style: 'unit',
+  unit: 'mile-per-hour'
 };
 
 console.log(new Intl.NumberFormat('en-US', options2).format(num)); // 3,884,764.23 mph
@@ -236,7 +236,7 @@ console.log('I\'m faster!'); // I'm faster! (...) 3 seconds later...
 
 // Pass arguments
 setTimeout((...text) =>
-    console.log(...text), 1000, 'A', 'B', 'C'); // A B C
+  console.log(...text), 1000, 'A', 'B', 'C'); // A B C
 
 // Cancel timer
 const timer = setTimeout(() => console.log('I will never ne logged :C'), 1000);
@@ -254,7 +254,7 @@ const interval1 = setInterval(() => console.log('A'), 1000);
 
 // Pass arguments
 const interval2 = setInterval((...text) =>
-    console.log(...text), 1000, 'X', 'Y', 'Z');
+  console.log(...text), 1000, 'X', 'Y', 'Z');
 
 // Cancel timer
 clearInterval(interval1);

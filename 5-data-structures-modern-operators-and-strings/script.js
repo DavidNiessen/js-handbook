@@ -37,40 +37,40 @@ console.log(p, q, r); // X Y 2
  */
 
 const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    birthYear: 1999,
-    hobbies: ['racing', 'gaming'],
-    car: {
-        brand: 'Chevrolet',
-        model: 'Corvette C7'
-    }
+  firstName: 'John',
+  lastName: 'Doe',
+  birthYear: 1999,
+  hobbies: ['racing', 'gaming'],
+  car: {
+    brand: 'Chevrolet',
+    model: 'Corvette C7'
+  }
 };
 
-const {firstName, lastName} = person;
+const { firstName, lastName } = person;
 console.log(firstName, lastName); // John Doe
 
 // Different variable names
-const {firstName: name1, birthYear: year} = person;
+const { firstName: name1, birthYear: year } = person;
 console.log(name1, year); // John 1999
 
 // Default values
-const {age = -1, birthYear} = person;
+const { age = -1, birthYear } = person;
 console.log(age, birthYear); // -1 1999
 
 // Mutating variables
 let l = 1;
 let k = 2;
-const obj = {l: 'X', k: 'Y'};
+const obj = { l: 'X', k: 'Y' };
 
-({l, k} = obj); // Parenthesis are required
+({ l, k } = obj); // Parenthesis are required
 console.log(l, k); // X Y
 
 // Nested objects
-const {car: {brand, model}} = person;
+const { car: { brand, model } } = person;
 console.log(brand, model); // Chevrolet Corvette C7
 
-const {hobbies: [hobby1, hobby2]} = person;
+const { hobbies: [hobby1, hobby2] } = person;
 console.log(hobby1, hobby2); // racing gaming
 
 
@@ -111,13 +111,13 @@ console.log([...myName]); // [ 'D', 'a', 'v', 'i', 'd' ]
 
 // Also works with objects
 const car = {
-    wheels: 4,
-    seats: 4
+  wheels: 4,
+  seats: 4
 };
 
 const mercedes = {
-    ...car,
-    brand: 'Mercedes'
+  ...car,
+  brand: 'Mercedes'
 };
 console.log(mercedes); // { wheels: 4, seats: 4, brand: 'Mercedes' }
 
@@ -131,12 +131,12 @@ const [g, h, ...others] = [1, 2, 3, 4, 5];
 console.log(g, h, others); // 1 2 [ 3, 4, 5 ]
 
 // Object
-const {firstName: fName, lastName: lName, ...otherData} = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 27,
-    country: 'Germany',
-    parents: ['Johnson', 'Johnetta']
+const { firstName: fName, lastName: lName, ...otherData } = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 27,
+  country: 'Germany',
+  parents: ['Johnson', 'Johnetta']
 };
 console.log(otherData); // { age: 27, country: 'Germany', parents: [ 'Johnson', 'Johnetta' ] }
 
@@ -191,13 +191,13 @@ console.log(0 ?? 'ABC'); // 0
  */
 
 const restaurant1 = {
-    name: 'Restaurant 1',
-    guests: 7
+  name: 'Restaurant 1',
+  guests: 7
 };
 
 const restaurant2 = {
-    name: 'Restaurant 2',
-    owner: 'John'
+  name: 'Restaurant 2',
+  owner: 'John'
 };
 
 // OR assignment operator
@@ -229,11 +229,11 @@ console.log(restaurant2.owner); // Max
 /*
  New way to add object to another object
 */
-const myObj1 = {id: 1};
+const myObj1 = { id: 1 };
 // OLD WAY (BEFORE ES6)
-const myObj2 = {obj1: myObj1};
+const myObj2 = { obj1: myObj1 };
 // NEW WAY (AFTER ES6)
-const myObj3 = {myObj1};
+const myObj3 = { myObj1 };
 
 console.log(myObj2); // { obj1: { id: 1 } }
 console.log(myObj3); // { myObj1: { id: 1 } }
@@ -243,16 +243,16 @@ console.log(myObj3); // { myObj1: { id: 1 } }
 */
 // OLD WAY
 const newObj1 = {
-    print: function (text) {
-        console.log(text);
-    }
+  print: function (text) {
+    console.log(text);
+  }
 };
 
 // NEW WAY (ES6)
 const newObj2 = {
-    print(text) {
-        console.log(text);
-    }
+  print(text) {
+    console.log(text);
+  }
 };
 
 /*
@@ -260,27 +260,27 @@ const newObj2 = {
 */
 const weekdays = ['mon', 'tue', 'wed'];
 const openingHours = {
-    [weekdays[0]]: '7am - 9pm',
-    [weekdays[1]]: '8am - 10pm',
-    [weekdays[2]]: '7am - 9pm'
+  [weekdays[0]]: '7am - 9pm',
+  [weekdays[1]]: '8am - 10pm',
+  [weekdays[2]]: '7am - 9pm'
 };
 
 console.log(openingHours); // { mon: '7am - 9pm', tue: '8am - 10pm', wed: '7am - 9pm' }
 
 /**
- * OPTIONAL CHAINING (??.)
+ * OPTIONAL CHAINING (?.)
  */
 
 const max = {
-    name: 'Max',
-    car: {
-        brand: 'Ferrari',
-        model: 'FXX K'
-    }
+  name: 'Max',
+  car: {
+    brand: 'Ferrari',
+    model: 'FXX K'
+  }
 };
 
 const mark = {
-    name: 'Mark'
+  name: 'Mark'
 };
 
 const maxCarBrand = max?.car?.brand ?? 'none';
@@ -340,9 +340,9 @@ console.log(userMap); // Map(2) { 'john' => 'john@gmail.com', 'max' => 'max@gmai
 
 // Because set returns the map, you can chain it
 userMap
-    .set('max', 'max@gmail.com')
-    .set('mark', 'mark@gmail.com')
-    .set('tom', 'tom@gmail.com');
+  .set('max', 'max@gmail.com')
+  .set('mark', 'mark@gmail.com')
+  .set('tom', 'tom@gmail.com');
 
 // Get value by key
 console.log(userMap.get('john')); // john@gmail.com
@@ -370,7 +370,7 @@ console.log(userMap.entries()); // [Map Entries] { [ 'john', 'john@gmail.com' ],
 
 // forEach
 userMap.forEach((value, key) =>
-    console.log(`${key}:${value}`)); // john:john@gmail.com max:max@gmail.com mark:mark@gmail.com
+  console.log(`${key}:${value}`)); // john:john@gmail.com max:max@gmail.com mark:mark@gmail.com
 
 // Clear map
 userMap.clear();

@@ -155,18 +155,18 @@ const container1 = document.querySelector('.propagation__container--1');
 const button1 = document.querySelector('.propagation__button--1');
 
 section1.addEventListener('click', event => {
-    event.preventDefault();
-    console.log('SECTION CLICKED');
+  event.preventDefault();
+  console.log('SECTION CLICKED');
 }, true); // This argument enables the capturing phase and disables bubbling
 
 container1.addEventListener('click', event => {
-    event.preventDefault();
-    console.log('CONTAINER CLICKED');
+  event.preventDefault();
+  console.log('CONTAINER CLICKED');
 }, true); // This argument enables the capturing phase and disables bubbling
 
 button1.addEventListener('click', event => {
-    event.preventDefault();
-    console.log('BUTTON CLICKED');
+  event.preventDefault();
+  console.log('BUTTON CLICKED');
 }, true); // This argument enables the capturing phase and disables bubbling
 
 /*
@@ -186,18 +186,18 @@ const button2 = document.querySelector('.propagation__button--2');
 
 
 section2.addEventListener('click', event => {
-    event.preventDefault();
-    console.log('SECTION CLICKED');
+  event.preventDefault();
+  console.log('SECTION CLICKED');
 });
 
 container2.addEventListener('click', event => {
-    event.preventDefault();
-    console.log('CONTAINER CLICKED');
+  event.preventDefault();
+  console.log('CONTAINER CLICKED');
 });
 
 button2.addEventListener('click', event => {
-    event.preventDefault();
-    console.log('BUTTON CLICKED');
+  event.preventDefault();
+  console.log('BUTTON CLICKED');
 });
 
 /*
@@ -216,24 +216,24 @@ const button3 = document.querySelector('.propagation__button--3');
 
 
 section3.addEventListener('click', event => {
-    event.preventDefault();
-    event.stopPropagation(); // Disables bubbling
+  event.preventDefault();
+  event.stopPropagation(); // Disables bubbling
 
-    console.log('SECTION CLICKED');
+  console.log('SECTION CLICKED');
 });
 
 container3.addEventListener('click', event => {
-    event.preventDefault();
-    event.stopPropagation(); // // Disables bubbling
+  event.preventDefault();
+  event.stopPropagation(); // // Disables bubbling
 
-    console.log('CONTAINER CLICKED');
+  console.log('CONTAINER CLICKED');
 });
 
 button3.addEventListener('click', event => {
-    event.preventDefault();
-    event.stopPropagation(); // // Disables bubbling
+  event.preventDefault();
+  event.stopPropagation(); // // Disables bubbling
 
-    console.log('BUTTON CLICKED');
+  console.log('BUTTON CLICKED');
 });
 
 /*
@@ -298,20 +298,20 @@ console.log(listItem.nextElementSibling); // <li class="shopping-list__item">...
 // Also all scripts must be loaded and executed before it is fired
 // It does not wait for images etc. to load
 document.addEventListener('DOMContentLoaded', () =>
-    console.log('HTML parsed and DOM tree built!'));
+  console.log('HTML parsed and DOM tree built!'));
 
 // load
 // Fired when the complete page has finished loading, including
 // images, css and external resources
 window.addEventListener('load', () =>
-    console.log('Page fully loaded!')
+  console.log('Page fully loaded!')
 );
 
 // beforeunload
 // Fired immediately before the user is about to leave the page
 window.addEventListener('beforeunload', event => {
-    event.preventDefault();
-    event.returnValue = '';
+  event.preventDefault();
+  event.returnValue = '';
 });
 
 /**

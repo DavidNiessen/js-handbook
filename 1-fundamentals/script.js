@@ -27,7 +27,7 @@ Semicolons are not necessary but a good practice.
 /*
 There is no difference between "" and '', it's up to you.
  */
-console.log("Hi");
+console.log('Hi');
 console.log('Hi');
 
 /**
@@ -74,7 +74,7 @@ const big2 = BigInt(12345); // same as 12345n
 /**
  * typeof OPERATOR
  */
-console.log(typeof "Hii"); // string
+console.log(typeof 'Hii'); // string
 console.log(typeof 5); // number
 console.log(typeof true); // boolean
 
@@ -205,9 +205,9 @@ const someonesAge = 15;
 const isOldEnough = someonesAge >= 18;
 
 if (isOldEnough) {
-    console.log('You are allowed to drive!');
+  console.log('You are allowed to drive!');
 } else {
-    console.log(`You need to wait ${18 - someonesAge} more years :C`);
+  console.log(`You need to wait ${18 - someonesAge} more years :C`);
 }
 
 /**
@@ -248,9 +248,9 @@ console.log(Boolean(-5)); // true
 
 let value;
 if (value) {
-    console.log('value is defined!');
+  console.log('value is defined!');
 } else {
-    console.log('value is undefined :C');
+  console.log('value is undefined :C');
 } // value is undefined :C
 
 /**
@@ -292,27 +292,27 @@ console.log(!false); // true
 const day = 'monday';
 
 switch (day) {
-    case 'monday':
-        console.log("It's monday!");
-        break;
-    case 'tuesday':
-        console.log("It's tuesday!");
-        break;
-    case 'wednesday':
-        console.log("It's wednesday!");
-        break;
-    case 'thursday':
-        console.log("It's thursday!");
-        break;
-    case 'friday':
-        console.log("It's friday!");
-        break;
-    case 'saturday':
-    case 'sunday':
-        console.log("It's weekend!");
-        break;
-    default:
-        console.log('Unknown day');
+  case 'monday':
+    console.log('It\'s monday!');
+    break;
+  case 'tuesday':
+    console.log('It\'s tuesday!');
+    break;
+  case 'wednesday':
+    console.log('It\'s wednesday!');
+    break;
+  case 'thursday':
+    console.log('It\'s thursday!');
+    break;
+  case 'friday':
+    console.log('It\'s friday!');
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('It\'s weekend!');
+    break;
+  default:
+    console.log('Unknown day');
 }
 
 /**

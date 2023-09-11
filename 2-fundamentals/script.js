@@ -27,7 +27,7 @@ With strict mode:
 
 // Declaring a function
 function logger(message) {
-    console.log(message);
+  console.log(message);
 }
 
 // Calling a function
@@ -35,7 +35,7 @@ logger('Hi');
 
 // Returning a value
 function add(x, y) {
-    return x + y;
+  return x + y;
 }
 
 console.log(add(7, 5)); // 12
@@ -46,7 +46,7 @@ console.log(add(7, 5)); // 12
 
 // Declaration
 const calcAge = function (birthYear) {
-    return 2023 - birthYear;
+  return 2023 - birthYear;
 };
 console.log(calcAge(2004)); // 19
 
@@ -75,8 +75,8 @@ const arrFunc2 = text => console.log(text);
 const arrFunc4 = (text1, text2, text3) => text1 + text2 + text3;
 // Multiple lines
 const arrFunc5 = () => {
-    console.log('Hi');
-    console.log('Hi');
+  console.log('Hi');
+  console.log('Hi');
 };
 
 /**
@@ -193,11 +193,11 @@ console.log(['a', 'b', 'c'].at(-2)); // b
 
 // Create object
 const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 69,
-    job: 'homeless',
-    friends: ['none :C']
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 69,
+  job: 'homeless',
+  friends: ['none :C']
 };
 
 
@@ -218,17 +218,17 @@ console.log(person.hobbies); // gaming, programming
  */
 
 const car = {
-    brand: 'Mercedes',
-    model: 'S63 AMG',
-    color: 'black',
+  brand: 'Mercedes',
+  model: 'S63 AMG',
+  color: 'black',
 
-    changeColor: function (newColor) {
-        this.color = newColor;
-    },
+  changeColor: function (newColor) {
+    this.color = newColor;
+  },
 
-    hasRightOfWay: function () {
-        return ['Mercedes', 'BMW', 'Porsche'].includes(this.brand);
-    }
+  hasRightOfWay: function () {
+    return ['Mercedes', 'BMW', 'Porsche'].includes(this.brand);
+  }
 };
 
 car.changeColor('white');
@@ -241,26 +241,26 @@ console.log(car.hasRightOfWay()); // true
  */
 
 for (let i = 0; i < 10; i++) {
-    console.log(i); // 0, 1, 2, 3... 9
+  console.log(i); // 0, 1, 2, 3... 9
 }
 
 // Looping through array with regular for loop
 const names = ['John', 'Mark', 'Peter', 'Tom', 'Max'];
 
 for (let i = 0; i < names.length; i++) {
-    console.log(names[i]); // John, Mark, Peter, Tom, Max
+  console.log(names[i]); // John, Mark, Peter, Tom, Max
 }
 
 // Cancelling a loop (break)
 for (let i = 0; i < 10; i++) {
-    console.log(i); // 1, 2, 3, 4, 5
-    if (i === 5) break;
+  console.log(i); // 1, 2, 3, 4, 5
+  if (i === 5) break;
 }
 
 // Skipping to next iteration (continue)
 for (let i = 0; i < 10; i++) {
-    if (i % 2 === 0) continue;
-    console.log(i); // 1, 3, 5, 7, 9
+  if (i % 2 === 0) continue;
+  console.log(i); // 1, 3, 5, 7, 9
 }
 
 /**
@@ -271,12 +271,12 @@ const myNewArray = [1, 'Hi', true, 765];
 
 // Loop through array
 for (const element of myNewArray) {
-    console.log(element); // 1, Hi, true, 765
+  console.log(element); // 1, Hi, true, 765
 }
 
 // With index
 for (const entry of ['A', 'B', 'C'].entries()) {
-    console.log(entry); // [ 0, 'A' ] [ 1, 'B' ] [ 2, 'C' ]
+  console.log(entry); // [ 0, 'A' ] [ 1, 'B' ] [ 2, 'C' ]
 }
 
 /**
@@ -284,12 +284,12 @@ for (const entry of ['A', 'B', 'C'].entries()) {
  */
 
 const myCar = {
-    brand: 'Chevrolet',
-    model: 'Camaro',
-    data: {
-        topSpeed: '180mph',
-        hp: '455hp'
-    }
+  brand: 'Chevrolet',
+  model: 'Camaro',
+  data: {
+    topSpeed: '180mph',
+    hp: '455hp'
+  }
 };
 
 // Properties
@@ -303,7 +303,7 @@ for (const value of values) console.log(value); // Chevrolet Camaro { topSpeed: 
 // Entire object
 const entries = Object.entries(myCar);
 for (const entry of entries)
-    console.log(entry); // [ 'brand', 'Chevrolet' ] [ 'model', 'Camaro' ] [ 'data', { topSpeed: '180mph', hp: '455hp' } ]
+  console.log(entry); // [ 'brand', 'Chevrolet' ] [ 'model', 'Camaro' ] [ 'data', { topSpeed: '180mph', hp: '455hp' } ]
 
 
 /**
@@ -312,12 +312,12 @@ for (const entry of entries)
 
 let counter = 0;
 while (counter < 5) {
-    console.log(counter++); // 0 1 2 3 4
+  console.log(counter++); // 0 1 2 3 4
 }
 
 // The do while loop will execute the body before checking the condition
 counter = 0;
 
 do {
-    console.log(counter++); // 0 1 2 3 4
+  console.log(counter++); // 0 1 2 3 4
 } while (counter < 5);

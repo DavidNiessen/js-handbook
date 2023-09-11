@@ -178,6 +178,9 @@
             <li>Module Pattern (legacy)</li>
         </ol>
     </li>
+     <li>
+        <h3>15: Project: Forkify</h3>
+    </li>
 </ul>
 <br>
 <br>

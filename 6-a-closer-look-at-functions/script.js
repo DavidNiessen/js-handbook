@@ -20,8 +20,8 @@ multipleDefaultParams(false, undefined, false); // false true false
 const oneWord = text => text.replaceAll(' ', '').toLowerCase();
 
 const upperFirstWord = text => {
-    const [first, ...others] = text.split(' ');
-    return [first.toUpperCase(), ...others].join(' ');
+  const [first, ...others] = text.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
 };
 
 // Higher order function
@@ -45,11 +45,11 @@ greet('Hello')('David'); // Hello, David!
  * from another object, so the 'this' keyword is bound to it.
  */
 
-const person1 = {name: 'John'};
-const person2 = {name: 'Max'};
+const person1 = { name: 'John' };
+const person2 = { name: 'Max' };
 
 const greetPerson = function (greeting) {
-    console.log(`${greeting} ${this.name}!`);
+  console.log(`${greeting} ${this.name}!`);
 };
 
 // CALL
@@ -69,11 +69,11 @@ greetPerson.apply(person2, ['Hello']); // Hello Max!
  * with a bound 'this'.
  */
 
-const person3 = {name: 'John'};
-const person4 = {name: 'Max'};
+const person3 = { name: 'John' };
+const person4 = { name: 'Max' };
 
 const greetSomeone = function (greeting) {
-    console.log(`${greeting} ${this.name}!`);
+  console.log(`${greeting} ${this.name}!`);
 };
 
 const greetJohn = greetSomeone.bind(person3, 'Hi');
@@ -88,7 +88,7 @@ greetMax('Hey'); // Hey Max!
 
 // Function expression
 (function () {
-    console.log('This will never run again!');
+  console.log('This will never run again!');
 })(); // This will never run again!
 
 // Arrow function

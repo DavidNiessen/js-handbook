@@ -5,7 +5,7 @@ const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
 const renderData = (data, isNeighbour = false) => {
-    const html = `
+  const html = `
         <article class="country ${isNeighbour ? 'neighbour' : ''}">
             <img class="country__img" src="${data.flags.svg}" />
             <div class="country__data">
@@ -18,8 +18,8 @@ const renderData = (data, isNeighbour = false) => {
         </article>
     `;
 
-    countriesContainer.insertAdjacentHTML('beforeend', html);
-    countriesContainer.style.opacity = '1';
+  countriesContainer.insertAdjacentHTML('beforeend', html);
+  countriesContainer.style.opacity = '1';
 };
 
 
@@ -35,22 +35,22 @@ request.open('GET', 'https://restcountries.com/v3.1/name/germany');
 request.send();
 
 request.addEventListener('load', () => {
-    const [data] = JSON.parse(request.responseText);
-    renderData(data);
+  const [data] = JSON.parse(request.responseText);
+  renderData(data);
 
-    // Second request
-    const [neighborCountry] = data.borders;
+  // Second request
+  const [neighborCountry] = data.borders;
 
-    if (!neighborCountry) return;
+  if (!neighborCountry) return;
 
-    const secondRequest = new XMLHttpRequest();
-    secondRequest.open('GET', `https://restcountries.com/v3.1/alpha/${neighborCountry}`);
-    secondRequest.send();
+  const secondRequest = new XMLHttpRequest();
+  secondRequest.open('GET', `https://restcountries.com/v3.1/alpha/${neighborCountry}`);
+  secondRequest.send();
 
-    secondRequest.addEventListener('load', () => {
-        const [data] = JSON.parse(secondRequest.responseText);
-        renderData(data, true);
-    });
+  secondRequest.addEventListener('load', () => {
+    const [data] = JSON.parse(secondRequest.responseText);
+    renderData(data, true);
+  });
 });
 
 /**
@@ -63,24 +63,24 @@ const newRequest = fetch('https://restcountries.com/v3.1/name/usa');
 
 const getCountryData = country => {
 
-    // First request
-    fetch(`https://restcountries.com/v3.1/name/${country}`)
-        .then(response => response.json())
-        .then(data => {
-            renderData(data[0]);
-            const neighbour = data[0].borders[0];
+  // First request
+  fetch(`https://restcountries.com/v3.1/name/${country}`)
+    .then(response => response.json())
+    .then(data => {
+      renderData(data[0]);
+      const neighbour = data[0].borders[0];
 
-            if (!neighbour) return;
+      if (!neighbour) return;
 
-            // Second request
-            return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
-        })
-        .then(response => response.json())
-        .then(data => renderData(data[0], true))
-        // Handle errors
-        .catch(() => alert('An error occurred'))
-        // This function will always be executed, even if an error occurs
-        .finally(() => console.log('fetch executed'));
+      // Second request
+      return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+    })
+    .then(response => response.json())
+    .then(data => renderData(data[0], true))
+    // Handle errors
+    .catch(() => alert('An error occurred'))
+    // This function will always be executed, even if an error occurs
+    .finally(() => console.log('fetch executed'));
 
 
 };
@@ -99,33 +99,33 @@ if (throwError) throw new Error('An error occurred'); // Uncaught Error: An erro
  */
 
 const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        if (Math.random() >= .5) {
-            resolve('You won :D');
-        } else {
-            reject('You lost :C');
-        }
-    }, 2000);
+  setTimeout(() => {
+    if (Math.random() >= .5) {
+      resolve('You won :D');
+    } else {
+      reject('You lost :C');
+    }
+  }, 2000);
 });
 
 promise
-    // If successful 
-    .then(res => console.log(res)) // You won :D
-    // if failed
-    .catch(err => console.log(err));
+  // If successful
+  .then(res => console.log(res)) // You won :D
+  // if failed
+  .catch(err => console.log(err));
 
 /**
  * HANDLING ERRORS WITH try/catch/finally
  */
 
 try {
-    throw new Error('test');
+  throw new Error('test');
 } catch (error) {
-    // This will be executed when an error occurs
-    console.log(error); // Error: test
+  // This will be executed when an error occurs
+  console.log(error); // Error: test
 } finally {
-    // This will always be executed
-    console.log('finally');
+  // This will always be executed
+  console.log('finally');
 }
 
 /**
@@ -143,15 +143,15 @@ try {
 // Functions declared with async run asynchronously in the background ->
 // Does not block the main thread    
 const renderJapan = async country => {
-    try {
-        // Waits for the result of the promise
-        // Automatically returns the response value or throws an error
-        const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
-        const data = await res.json();
-        renderData(data[0]);
-    } catch (error) {
-        console.log(error);
-    }
+  try {
+    // Waits for the result of the promise
+    // Automatically returns the response value or throws an error
+    const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+    const data = await res.json();
+    renderData(data[0]);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 renderJapan('japan');
@@ -166,18 +166,18 @@ renderJapan('japan');
  */
 
 const getAfterSeconds = (text, seconds) =>
-    new Promise(resolve => setTimeout(() =>
-        resolve(text), seconds * 1000));
+  new Promise(resolve => setTimeout(() =>
+    resolve(text), seconds * 1000));
 
 (async () => {
 
-    const data = await Promise.all([
-        getAfterSeconds('A', 5),
-        getAfterSeconds('B', 1),
-        getAfterSeconds('C', 3)
-    ]);
+  const data = await Promise.all([
+    getAfterSeconds('A', 5),
+    getAfterSeconds('B', 1),
+    getAfterSeconds('C', 3)
+  ]);
 
-    console.log(data); // ['A', 'B', 'C']
+  console.log(data); // ['A', 'B', 'C']
 })();
 
 /**
@@ -187,42 +187,42 @@ const getAfterSeconds = (text, seconds) =>
 // Promise.race
 // Returns the first finished fulfilled promise 
 (async () => {
-    const response = await Promise.race([
-        getAfterSeconds('A', 5),
-        getAfterSeconds('B', 1),
-        getAfterSeconds('C', 3)
-    ]);
+  const response = await Promise.race([
+    getAfterSeconds('A', 5),
+    getAfterSeconds('B', 1),
+    getAfterSeconds('C', 3)
+  ]);
 
-    console.log(response); // B
+  console.log(response); // B
 })();
 
 // Use Promise.race to create a timeout
 const timeout = sec =>
-    new Promise((_, reject) =>
-        setTimeout(() =>
-            reject(new Error('Request took to long.')), sec * 1000));
+  new Promise((_, reject) =>
+    setTimeout(() =>
+      reject(new Error('Request took to long.')), sec * 1000));
 
 Promise.race([
-    getAfterSeconds('X', 2),
-    timeout(1)
+  getAfterSeconds('X', 2),
+  timeout(1)
 ])
-    .then(res => console.log(res))
-    .catch(error => console.log(error)); // Error: Request took too long
+  .then(res => console.log(res))
+  .catch(error => console.log(error)); // Error: Request took too long
 
 Promise.race([
-    getAfterSeconds('X', 1),
-    timeout(2)
+  getAfterSeconds('X', 1),
+  timeout(2)
 ])
-    .then(res => console.log(res)) // X
-    .catch(error => console.log(error));
+  .then(res => console.log(res)) // X
+  .catch(error => console.log(error));
 
 // Promise.allSettled
 // Returns a new promise that resolves after all the input promises have settled,
 // either resolved or rejected.
 Promise.allSettled([
-    Promise.resolve('Success'),
-    Promise.reject('Error'),
-    Promise.resolve('Another success'),
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('Another success'),
 ]).then(res => console.log(res));
 /*
 {status: 'fulfilled', value: 'Success'}
@@ -233,7 +233,7 @@ Promise.allSettled([
 // Promise.any
 // Returns the first fulfilled promise and ignores rejected promises
 Promise.any([
-    Promise.resolve('Success'),
-    Promise.reject('Error'),
-    Promise.resolve('Another success'),
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('Another success'),
 ]).then(res => console.log(res));

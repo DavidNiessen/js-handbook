@@ -12,7 +12,7 @@ Applies a callback function to all elements of the array
  */
 console.log(['6', '3', '9', '2', '20'].map(element => element * 2)); // [ 12, 6, 18, 4, 40 ]
 console.log(['a', 'b', 'c', 'd', 'e'].map((element, index) =>
-    index % 2 === 0 ? element.toUpperCase() : element)); // [ 'A', 'b', 'C', 'd', 'E' ]
+  index % 2 === 0 ? element.toUpperCase() : element)); // [ 'A', 'b', 'C', 'd', 'E' ]
 
 /*
 filter Method
@@ -31,7 +31,7 @@ and each element in an array to reduce it to a single value.
 
 // same as 1 + 2 + 3 + 4 + 5
 console.log([1, 2, 3, 4, 5].reduce((previous, current) =>
-    previous + current)); // 15
+  previous + current)); // 15
 
 /**
  * find AND findIndex METHODS
@@ -92,17 +92,17 @@ A combination of map() and flat() -> first applies a function to each element of
 an array and then flattens the result into a single-level array.
  */
 console.log([1, 2, [4, 5], 6, 7, [8]]
-    .flatMap(element => element)); // [ 1, 2, 4, 5, 6, 7, 8 ]
+  .flatMap(element => element)); // [ 1, 2, 4, 5, 6, 7, 8 ]
 
 /**
  * SORTING
  */
 
 console.log([3, 4, 1, 5, 2].sort((a, b) =>
-    (a - b))); // [ 1, 2, 3, 4, 5 ]
+  (a - b))); // [ 1, 2, 3, 4, 5 ]
 
 console.log(['C', 'B', 'D', 'A'].sort((a, b) =>
-    a.localeCompare(b))); // [ 'A', 'B', 'C', 'D' ]
+  a.localeCompare(b))); // [ 'A', 'B', 'C', 'D' ]
 
 /**
  * MORE WAYS OF CREATING AND FILLING ARRAYS
@@ -124,11 +124,11 @@ emptyArray.fill('Z', 2, 5);
 console.log(emptyArray); // [ 'X', 'X', 'Z', 'Z', 'Z', 'Y', 'Y' ]
 
 // from Method
-console.log(Array.from({length: 7},
-    () => 1)); // [ 1, 1, 1, 1, 1, 1, 1 ]
+console.log(Array.from({ length: 7 },
+  () => 1)); // [ 1, 1, 1, 1, 1, 1, 1 ]
 
-console.log(Array.from({length: 7},
-    (_, index) => index + 1)); // [ 1, 2, 3, 4, 5, 6, 7 ]
+console.log(Array.from({ length: 7 },
+  (_, index) => index + 1)); // [ 1, 2, 3, 4, 5, 6, 7 ]
 
 
 
